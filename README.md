@@ -66,10 +66,10 @@ GitHub Repo: [https://github.com/Ethyates/Portfolio-landing-page](https://github
 ## Screenshots
 
 ### Desktop
-![Desktop Screenshot](screenshots/desktop.png)
+![Desktop Screenshot](screenshots/desktop.PNG)
 
 ### Mobile
-![Mobile Screenshot](screenshots/mobile.png)
+![Mobile Screenshot](screenshots/mobile.PNG)
 
 ---
 
