@@ -1,0 +1,200 @@
+:root{
+
+--bg:#ffffff;
+--text:#111111;
+--card:#f5f5f5;
+--accent:#2c3e50;
+
+--space1:0.5rem;
+--space2:1rem;
+--space3:2rem;
+
+--max:70rem;
+
+}
+
+[data-theme="dark"]{
+
+--bg:#121212;
+--text:#f5f5f5;
+--card:#1f1f1f;
+
+}
+
+/* base */
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+animation:fadeIn .6s ease;
+}
+
+.container{
+max-width:var(--max);
+margin:auto;
+padding:var(--space3);
+}
+
+/* navbar */
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.nav-links{
+display:flex;
+gap:var(--space2);
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+}
+
+#theme-toggle{
+background:none;
+border:none;
+font-size:1.2rem;
+cursor:pointer;
+}
+
+/* hero */
+
+.hero{
+display:flex;
+flex-direction:column;
+gap:var(--space3);
+align-items:center;
+}
+
+.hero-text{
+max-width:400px;
+}
+
+.hero-image img{
+width:200px;
+border-radius:50%;
+}
+
+/* buttons */
+
+.btn{
+display:inline-block;
+background:var(--accent);
+color:white;
+padding:var(--space2);
+text-decoration:none;
+border-radius:6px;
+transition:transform .2s, box-shadow .2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.btn-small{
+display:inline-block;
+margin-top:var(--space1);
+font-size:.9rem;
+}
+
+/* projects */
+
+.project-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:var(--space3);
+}
+
+.card{
+background:var(--card);
+padding:var(--space3);
+border-radius:8px;
+transition:transform .2s, box-shadow .2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 6px 14px rgba(0,0,0,.15);
+}
+
+/* skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:var(--space2);
+}
+
+.skill{
+background:var(--card);
+padding:var(--space1) var(--space2);
+border-radius:4px;
+}
+
+/* footer */
+
+.footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #ddd;
+}
+
+/* focus accessibility */
+
+a:focus,
+button:focus{
+outline:3px solid #4c9ffe;
+}
+
+/* animation */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* breakpoint 1 */
+
+@media (min-width:768px){
+
+.hero{
+flex-direction:row;
+justify-content:space-between;
+}
+
+.project-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* breakpoint 2 */
+
+@media (min-width:1024px){
+
+.project-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
